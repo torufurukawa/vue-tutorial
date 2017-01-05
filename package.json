@@ -19,5 +19,8 @@
   "homepage": "https://github.com/torufurukawa/vue-tutorial#readme",
   "devDependencies": {
     "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "vue": "^2.0.1"
   }
 }
