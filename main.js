@@ -1,7 +1,7 @@
 var Vue = require("vue");
-var demo = new Vue({
-  el: "#demo",
-  data: {
-    message: "Hello Vue.js"
-  }
+var app = new Vue({
+   el: "#app",
+   data: {
+     message: "Hello Vue.js"
+   }
 });
