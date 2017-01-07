@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "webpack main.js bundle.js",
+    "build": "webpack -w main.js bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
