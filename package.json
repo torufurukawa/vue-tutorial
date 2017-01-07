@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "webpack -w main.js bundle.js",
+    "start": "webpack-dev-server --progress --colors --inline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/torufurukawa/vue-tutorial#readme",
   "devDependencies": {
-    "webpack": "^1.14.0"
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "vue": "^2.1.8"

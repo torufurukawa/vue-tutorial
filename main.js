@@ -1,7 +1,9 @@
+require("./style.css");
+
 var Vue = require("vue");
 var app = new Vue({
    el: "#app",
    data: {
-     message: "Hello Vue.js"
+     message: "Hello Vue.js !!"
    }
 });
