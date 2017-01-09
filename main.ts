@@ -1,8 +1,16 @@
 import * as Vue from "vue";
 
-new Vue({
-  el: "#app",
+interface ITask {
+  body: string;
+  done: boolean;
+}
+
+class TodoApp extends Vue {
+};
+
+export var todoApp = new TodoApp({
+  el: '#todoapp',
   data: {
-    message: "Hello Vue.js !!"
+    tasks: ITask[]
   }
 });
