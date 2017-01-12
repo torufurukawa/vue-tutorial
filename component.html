@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="example">
+      <div>{{message}}</div>
+      <div is="my-component" my-unit="V"></div>
+      <div is="my-component" my-unit="pints"></div>
+      <div is="my-component" :my-unit="message"></div>
+    </div>
+  </body>
+
+  <script>
+    var myComponent = {
+      props: ['myUnit'],
+      template: '<button v-on:click="counter += 1">{{counter}} {{myUnit}}</button>',
+      data: function() {
+        return {counter: 0}
+      }
+    };
+
+    new Vue(
+      {
+        el: '#example',
+        data: {
+          message: 'hello'
+        },
+        components: {
+          'my-component': myComponent
+        }
+      }
+    );
+  </script>
+</html>
