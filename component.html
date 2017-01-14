@@ -7,7 +7,7 @@
 
     <div id="example">
       <div>
-        <child-component></child-component>
+        <parent-component></parent-component>
       </div>
       <div>
         <p>{{total}}</p>
@@ -48,8 +48,14 @@
     };
 
     var childComponent = {
-      template: '<div><h1>parent</h1><div><h2>child</h2><p>foo</p><p>bar</p></div>'
+      template: '<div><h2>child</h2><slot><p>foo</p><p>bar</p></slot></div>'
     };
+
+    var parentComponent = {
+      template: '<div><h1>parent</h1><child-component><p>hoge</p><p>fuga</p></child-component></div>'
+    };
+
+    Vue.component('child-component', childComponent);
 
     new Vue(
       {
@@ -66,7 +72,8 @@
         components: {
           'my-component': myComponent,
           'button-counter': buttonCounterComponent,
-          'child-component': childComponent
+          // 'child-component': childComponent,
+          'parent-component': parentComponent
         }
       }
     );
