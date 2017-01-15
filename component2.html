@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="example">
+      <div>{{message}}</div>
+    </div>
+
+  <script>
+    var main = {
+      data: function() {
+        return {message: 'Hello'}
+      }
+    };
+
+
+    Vue.component('main', main);
+    Vue({el:'example'});
+  </script>
+</html>
